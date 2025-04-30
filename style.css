@@ -1,110 +1,118 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: #f0f0f0;
-  }
-  
-  .calculator {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-  }
-  
-  #display {
-    width: 100%;
-    height: 60px;
-    font-size: 2em;
-    margin-bottom: 10px;
-    text-align: right;
-    padding: 10px;
-  }
-  
-  .buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 70px);
-    grid-gap: 10px;
-  }
-  
-  button {
-    height: 70px;
-    font-size: 1.5em;
-    border: none;
-    border-radius: 8px;
-    background: #e0e0e0;
-    cursor: pointer;
-  }
-  
-  button:active {
-    background: #ccc;
-  }
-  
-  .zero {
-    grid-column: span 2;
-  }
-body.dark {
-    background: #1e1e1e;
-  }
-  
-  .calculator.dark {
-    background: #333;
-    color: white;
-  }
-  
-  .calculator.dark #display {
-    background: #555;
-    color: white;
-  }
-  
-  .calculator.dark button {
-    background: #666;
-    color: white;
-  }
-  
-  .calculator.dark button:active {
-    background: #888;
-  }
-  
-  .theme-btn {
-    background: none;
-    border: none;
-    font-size: 1.5em;
-    margin-bottom: 10px;
-    cursor: pointer;
-  }
-  button {
-    transition: transform 0.1s ease;
-  }
-  
-  button:active {
-    transform: scale(0.95);
-    background: #ccc;
-  }
-  .history {
-    margin-top: 20px;
-    padding: 15px;
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-    width: 300px;
-    max-height: 300px;
-    overflow-y: auto;
-  }
-  
-  .history h3 {
-    margin-bottom: 10px;
-    text-align: center;
-  }
-  
-  .history ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .history li {
-    margin-bottom: 5px;
-    font-size: 1em;
-  }
-    
+  margin: 0;
+  padding: 0;
+  background: #f0f0f0;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.calculator {
+  background: rgba(30, 30, 47, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+  width: 320px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.theme-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 1.2em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #00f0ff;
+}
+
+#display {
+  width: 100%;
+  height: 60px;
+  font-size: 2em;
+  text-align: right;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  height: 60px;
+  font-size: 1.4em;
+  border: none;
+  border-radius: 12px;
+  background: rgba(0, 255, 255, 0.15);
+  color: #00f0ff;
+  cursor: pointer;
+  transition: transform 0.1s, background 0.2s;
+}
+
+button:active {
+  transform: scale(0.95);
+  background: rgba(0, 255, 255, 0.25);
+}
+
+.zero {
+  grid-column: span 2;
+}
+
+.dark body {
+  background: #0e0e1f;
+}
+
+.calculator.dark {
+  background: rgba(15, 15, 25, 0.95);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
+}
+
+.calculator.dark #display,
+.calculator.dark button {
+  background: rgba(255, 255, 255, 0.05);
+  color: #00f0ff;
+}
+
+.history {
+  margin-top: 25px;
+  padding: 15px;
+  background: rgba(30, 30, 47, 0.85);
+  border-radius: 15px;
+  width: 320px;
+  max-height: 200px;
+  overflow-y: auto;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+  color: white;
+}
+
+.history h3 {
+  margin-top: 0;
+  text-align: center;
+  color: #00f0ff;
+}
+
+.history ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.history li {
+  padding: 5px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1em;
+  color: #ccc;
+}
