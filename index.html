@@ -3,17 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>ProCalc</title>
+  <title>ProCalc - Neon Calculator</title>
   <link rel="stylesheet" href="style.css">
   <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#ffffff">
-
+  <meta name="theme-color" content="#1e1e2f">
 </head>
 <body>
-    <div class="history">
-        <h3>History</h3>
-        <ul id="historyList"></ul>
-      </div>      
 
   <div class="calculator">
     <button onclick="toggleDarkMode()" class="theme-btn">🌙</button>
@@ -45,6 +40,11 @@
     </div>
   </div>
 
-<script src="script.js"></script>
+  <div class="history">
+    <h3>History</h3>
+    <ul id="historyList"></ul>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
